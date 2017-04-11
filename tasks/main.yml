@@ -1,0 +1,6 @@
+---
+
+- include: dc.yml
+- include: cluster.yml
+- include: host.yml
+- include: vm.yml

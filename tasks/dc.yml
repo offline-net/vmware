@@ -2,9 +2,9 @@
 - name: Create Datacenter
   local_action:
     module: vmware_datacenter
-    hostname: "172.16.180.200"
-    username: root
+    hostname: "{{ vcenter.ip }}"
+    username: "{{ vcenter.user }}"
+    password: "{{ vcenter.pwd }}"
     validate_certs: False
-    password: Losangelesdu973
-    datacenter_name: "toto"
+    datacenter_name: "{{ vcenter.dc.name }}"
     state: present

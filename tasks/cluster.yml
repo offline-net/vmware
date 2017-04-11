@@ -2,11 +2,11 @@
 - name: create cluster
   local_action:
     module: vmware_cluster
-    hostname: "{{ host-ip }}"
-    username: "{{ user-name }}"
+    hostname: "{{ vcenter.ip }}"
+    username: "{{ vcenter.user }}"
+    password: "{{ vcenter.pwd }}"
     validate_certs: False
-    password: "{{ user-pwd }}"
-    datacenter_name: "{{ datacenter-name }}"
-    cluster_name: "{{ cluster-name }}"
-    enable_ha: True
-    enable_drs: True
+    datacenter_name: "{{ vcenter.dc.name }}"
+    cluster_name: "{{ vcenter.dc.cluster.name }}"
+    enable_ha: "{{ vcenter.dc.cluster.ha }}"
+    enable_drs: "{{ vcenter.dc.cluster.drs }}"
