@@ -6,7 +6,7 @@
     username: "{{ vcenter.user }}"
     password: "{{ vcenter.pwd }}"
     validate_certs: False
-    datacenter_name: "{{ vcenter.dc }}"
-    cluster_name: "{{ vcenter.dc.cluster }}"
+    datacenter_name: "{{ vcenter.dc.name }}"
+    cluster_name: "{{ vcenter.dc.cluster.name }}"
     enable_ha: "{{ vcenter.dc.cluster.ha }}"
     enable_drs: "{{ vcenter.dc.cluster.drs }}"
