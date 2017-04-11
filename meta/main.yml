@@ -1,0 +1,9 @@
+---
+galaxy_info:
+  author:
+    - Alexandre Punch
+  description: Ansible Role for node management.
+  company: Offline.net ESGI
+  license: license (GPLv2, CC-BY, etc)
+  min_ansible_version: 2.0
+dependencies: []
