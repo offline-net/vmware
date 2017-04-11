@@ -1,0 +1,12 @@
+---
+- name: create cluster
+  local_action:
+    module: vmware_cluster
+    hostname: "{{ host-ip }}"
+    username: "{{ user-name }}"
+    validate_certs: False
+    password: "{{ user-pwd }}"
+    datacenter_name: "{{ datacenter-name }}"
+    cluster_name: "{{ cluster-name }}"
+    enable_ha: True
+    enable_drs: True

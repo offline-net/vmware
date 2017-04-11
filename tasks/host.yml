@@ -1,0 +1,13 @@
+- name: Add ESXi Host to VCSA
+  local_action:
+    module: vmware_host
+    hostname: "172.16.180.200"
+    username: root
+    password: Losangelesdu973
+    datacenter_name: labvmotion
+    validate_certs: False
+    cluster_name: test1
+    esxi_hostname: "172.16.180.160"
+    esxi_username: root
+    esxi_password: Losangelesdu973
+    state: present

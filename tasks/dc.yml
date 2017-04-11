@@ -1,0 +1,10 @@
+---
+- name: Create Datacenter
+  local_action:
+    module: vmware_datacenter
+    hostname: "172.16.180.200"
+    username: root
+    validate_certs: False
+    password: Losangelesdu973
+    datacenter_name: "toto"
+    state: present
