@@ -4,9 +4,11 @@
     username: "{{ vcenter.user }}"
     password: "{{ vcenter.pwd }}"
     validate_certs: True
-    guest: "{{ vm_name.0 }}"
+    guest: "{{ item }}"
     from_template: yes
     template_src: "{{ template_name.0 }}"
     cluster: "{{ clusters.1 }}"
     esxi: "{{ hosts.1 }}"
     state: present
+  with_items:
+    - "{{ vm_name }}"
