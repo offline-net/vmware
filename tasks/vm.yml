@@ -1,14 +1,14 @@
 ---
-- vsphere_guest:
-    vcenter_hostname: "{{ vcenter.ip }}"
+- name: Create VM
+  vmware_guest:
+    hostname: "{{ vcenter.ip }}"
     username: "{{ vcenter.user }}"
     password: "{{ vcenter.pwd }}"
-    validate_certs: True
-    guest: "{{ item }}"
-    from_template: yes
-    template_src: "{{ template_name.0 }}"
-    cluster: "{{ clusters.1 }}"
-    esxi: "{{ hosts.1 }}"
-    state: present
+    validate_certs: False
+    esxi_hostname: "{{ hosts.1 }}"
+    datacenter: "{{ dc }}"
+    state: poweredon
+    name: "{{ item }}"
+    template: "{{ template_name.0 }}"
   with_items:
     - "{{ vm_name }}"
