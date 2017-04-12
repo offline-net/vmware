@@ -6,7 +6,7 @@
     password: "{{ vcenter.pwd }}"
     datacenter_name: "{{ dc.0 }}"
     validate_certs: False
-    cluster_name: "{{ clusters.1 }}"
+    cluster_name: "{{ clusters.0 }}"
     esxi_hostname: "{{ item }}"
     esxi_username: "{{ hosts_user }}"
     esxi_password: "{{ hosts_pwd }}"
