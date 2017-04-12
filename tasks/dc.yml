@@ -6,5 +6,5 @@
     username: "{{ vcenter.user }}"
     password: "{{ vcenter.pwd }}"
     validate_certs: False
-    datacenter_name: "{{ vcenter.dc.name }}"
+    datacenter_name: "{{ dc }}"
     state: present
