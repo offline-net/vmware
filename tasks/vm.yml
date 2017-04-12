@@ -5,7 +5,7 @@
     username: "{{ vcenter.user }}"
     password: "{{ vcenter.pwd }}"
     validate_certs: False
-    esxi_hostname: "{{ hosts.1 }}"
+    esxi_hostname: "{{ hosts.0 }}"
     datacenter: "{{ dc.0 }}"
     state: poweredon
     name: "{{ item }}"
