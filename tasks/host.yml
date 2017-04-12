@@ -4,7 +4,7 @@
     hostname: "{{ vcenter.ip }}"
     username: "{{ vcenter.user }}"
     password: "{{ vcenter.pwd }}"
-    datacenter_name: "{{ dc }}"
+    datacenter_name: "{{ dc.0 }}"
     validate_certs: False
     cluster_name: "{{ clusters.1 }}"
     esxi_hostname: "{{ item }}"
