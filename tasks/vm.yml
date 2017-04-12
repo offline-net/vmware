@@ -7,6 +7,6 @@
     guest: "{{ vm_name.0 }}"
     from_template: yes
     template_src: "{{ template_name.0 }}"
-    cluster: "{{ cluster.1 }}"
+    cluster: "{{ clusters.1 }}"
     esxi: "{{ hosts.1 }}"
     state: present
